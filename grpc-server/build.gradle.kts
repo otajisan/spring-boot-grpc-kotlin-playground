@@ -56,8 +56,7 @@ jib {
         workingDirectory = "/grpc-server"
         volumes = listOf("/data")
         ports = listOf(
-            "18080",
-            "38080"
+            "19090",
         )
     }
 }
@@ -77,6 +76,9 @@ dependencies {
     implementation("io.grpc:grpc-kotlin-stub:$grpcKotlinVersion")
     implementation("com.google.protobuf:protobuf-java:$protobufVersion")
     implementation("com.google.protobuf:protobuf-kotlin:$protobufVersion")
+
+    // Use common protobuf classes
+    //implementation(project(":grpc-interface"))
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
