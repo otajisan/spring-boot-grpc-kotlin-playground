@@ -34,3 +34,18 @@ grpcurl \
   "message": "Hello, My name!"
 }
 ```
+
+### Client
+
+- launch client application
+
+```bash
+./gradlew :client:bootRun
+```
+
+- send request
+
+```bash
+curl localhost:18080/greet/otajisan
+Hello, otajisan!
+```
